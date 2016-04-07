@@ -27,6 +27,13 @@ class DB(object):
     def __getattr__(self, collection):
         return self.db[collection]
 
+    def __dir__(self):
+        completionList = self.db.collection_names()
+        completionList.append('showCollections')
+        completionList.append('dropDatabase')
+        completionList.append('use')
+        return completionList
+
 
 @register_line_magic
 def use(dbName):
