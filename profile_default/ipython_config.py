@@ -178,7 +178,9 @@ packagesToImport = [
 modulesToImport = [
     ('uuid', 'uuid4'),
     ('datetime', 'datetime', 'timedelta'),
-    ('collections', 'Counter', 'OrderedDict', 'defaultdict')
+    ('collections', 'Counter', 'OrderedDict', 'defaultdict'),
+    ('pprint', 'pprint', 'pformat'),
+    ('bson', 'ObjectId')
 ]
 c.TerminalIPythonApp.exec_lines = [
     '%doctest_mode on',
